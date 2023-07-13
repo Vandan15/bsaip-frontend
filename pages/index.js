@@ -4,77 +4,7 @@ import React from 'react'
 import Carousel from 'react-bootstrap/Carousel';
 
 export default function index() {
-  
-  /* -------------------------------------------------------------------------- */
-  /*                                Scroll To Top                               */
-  /* -------------------------------------------------------------------------- */
-  
-  if (typeof window !== 'undefined') {
-    let mybutton = document.getElementById("scrollToTopBtn");
-    window.onscroll = function() {scrollFunction()};
-    function scrollFunction() {
-      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        mybutton.style.display = "block";
-      } else {
-        mybutton.style.display = "none";
-      }
-    }  
-  }
-  
-  function scrollToTop() {
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
-  } 
-  function expandNav(){
-    document.getElementById('expandNav').classList.toggle('active')
-    document.getElementById('hNavLinks').classList.toggle('active')
-  }
-  
-  
-  function scroll_left(){
-    
-    if(window.screen.width >= '1350'){
-      document.getElementById('scrollableContainer').scrollBy(1300,0);
-    }else if(window.screen.width <= '1350' && window.screen.width >= 1130){
-      document.getElementById('scrollableContainer').scrollBy(1100,0);
-    }else if(window.screen.width <= '1130' && window.screen.width >= 972){
-      document.getElementById('scrollableContainer').scrollBy(900,0);
-    }else if(window.screen.width <= '972' && window.screen.width >= 836){
-      document.getElementById('scrollableContainer').scrollBy(800,0);
-    }else if(window.screen.width <= '836' && window.screen.width >= 640){
-      document.getElementById('scrollableContainer').scrollBy(600,0);
-    }else if(window.screen.width <= '640' && window.screen.width >= 540){
-      document.getElementById('scrollableContainer').scrollBy(500,0);
-    }else if(window.screen.width <= '540' && window.screen.width >= 440){
-      document.getElementById('scrollableContainer').scrollBy(400,0);
-    }else if(window.screen.width <= '440' && window.screen.width >= 365){
-      document.getElementById('scrollableContainer').scrollBy(350,0);
-    }else if(window.screen.width <= '365'){
-      document.getElementById('scrollableContainer').scrollBy(340,0);
-    }
-  };
-  function scroll_right(){
-    
-    if(window.screen.width >= '1350'){
-      document.getElementById('scrollableContainer').scrollBy(-1300,0);
-    }else if(window.screen.width <= '1350' && window.screen.width >= 1130){
-      document.getElementById('scrollableContainer').scrollBy(-1100,0);
-    }else if(window.screen.width <= '1130' && window.screen.width >= 972){
-      document.getElementById('scrollableContainer').scrollBy(-900,0);
-    }else if(window.screen.width <= '972' && window.screen.width >= 836){
-      document.getElementById('scrollableContainer').scrollBy(-800,0);
-    }else if(window.screen.width <= '836' && window.screen.width >= 640){
-      document.getElementById('scrollableContainer').scrollBy(-600,0);
-    }else if(window.screen.width <= '640' && window.screen.width >= 540){
-      document.getElementById('scrollableContainer').scrollBy(-500,0);
-    }else if(window.screen.width <= '540' && window.screen.width >= 440){
-      document.getElementById('scrollableContainer').scrollBy(-400,0);
-    }else if(window.screen.width <= '440' && window.screen.width >= 365){
-      document.getElementById('scrollableContainer').scrollBy(-350,0);
-    }else if(window.screen.width <= '365'){
-      document.getElementById('scrollableContainer').scrollBy(-340,0);
-    }
-  };
+
   
   return (    
     <main className='AnangpuriaHomePage'>
@@ -161,7 +91,7 @@ export default function index() {
             <Link href='#'><a>STUDENT LIFE</a></Link>
             <Link href='#'><a>PLACEMENTS</a></Link>
           </div>
-          <div className='hNavLinks' onClick={expandNav} id='hNavLinks'>
+          <div className='hNavLinks' id='hNavLinks'>
             <h3>Menu</h3>
             <div className='caretDown'>
               <Image src='/assets/AnangpuriaHomePage/caretDown.svg' objectFit='contain' height={26} width={26} alt='img'/>
@@ -349,10 +279,10 @@ export default function index() {
              </div>    
             </div>
             <div className='eventBtns'>
-              <button onClick={scroll_right}>
+              <button>
                 <Image src='/assets/AnangpuriaHomePage/eventLeftBtn.png' objectFit='contain' height={45} width={45} alt='img'/>
               </button>
-              <button onClick={scroll_left}>
+              <button>
                 <Image src='/assets/AnangpuriaHomePage/eventRightBtn.png' objectFit='contain' height={45} width={45} alt='img'/>
               </button>
             </div>
@@ -537,7 +467,7 @@ export default function index() {
       /*                                Scroll To Top                                */
       /* --------------------------------------------------------------------------  */}
       
-      <button onClick={scrollToTop} id='scrollToTopBtn'>
+      <button id='scrollToTopBtn'>
         <Image src='/assets/AnangpuriaHomePage/topBtn.png' objectFit='contain' height={40} width={40} alt='img'/>
       </button>
       
