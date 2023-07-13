@@ -15,6 +15,7 @@ import 'aos/dist/aos.css'; // You can also use <link> for styles
 import Aos from 'aos';
 
 function MyApp({ Component, pageProps }) {
+  const [loading, setLoading] = useState(false);
   useEffect(() => {
     Aos.init();
   }, [])
