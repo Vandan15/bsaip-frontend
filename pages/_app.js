@@ -25,7 +25,7 @@ function MyApp({ Component, pageProps }) {
         <html lang={'en'} />
         <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="language" content="English" />
-        <script type="text/javascript" src="https://unpkg.com/default-passive-events"></script>
+        {/* <script type="text/javascript" src="https://unpkg.com/default-passive-events"></script> */}
       </Head>
       <Provider store={store}>
         {loading ? "Loading..." :
