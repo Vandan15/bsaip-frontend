@@ -1,0 +1,46 @@
+const API_ROOT = 'https://api.mcme.in'
+const WP_ROOT_API = 'https://blog.mcme.in'
+// https://mc-me.herokuapp.com
+// http://localhost:8000
+const APIUrls = {
+  login: API_ROOT + '/user/login',
+  register: API_ROOT + '/user/create',
+  course: API_ROOT + '/course',
+  lead: API_ROOT + '/lead',
+  contact: API_ROOT + '/contact-form/get',
+  create_contact: API_ROOT+'/contact-form/create',
+  user: API_ROOT + '/user',
+  user_courses: API_ROOT + '/user/courses',
+  razorpay: API_ROOT + '/user/razorpay',
+  razorpay_validate: API_ROOT + '/user/razorpay/validate',
+  create_course: API_ROOT + '/course/create',
+  related_product: API_ROOT + '/product/related-product',
+  bestseller_product: API_ROOT + '/product/bestseller-product',
+  new_product: API_ROOT + '/product/new-product',
+  section: API_ROOT + '/section',
+  save_cart: API_ROOT + '/user/add-to-cart',
+  upload_img: API_ROOT + '/course/upload',
+  search_product: API_ROOT + '/product/search',
+  create_product: API_ROOT + '/product/create',
+  banner: API_ROOT + '/banner',
+  banner_create: API_ROOT + '/banner/create',
+  section_create: API_ROOT + '/section/create',
+  update_section: API_ROOT + '/section/update',
+  add_shipping_address: API_ROOT + '/user/add-address',
+  add_category: API_ROOT + '/category-list/create',
+  update_category: API_ROOT + '/category-list/update-category',
+  categoryList: API_ROOT + '/category-list',
+  order: API_ROOT + '/order',
+  validate_order: API_ROOT + '/order/validate',
+  create_order: API_ROOT + '/order/create',
+  fetch_coupon: API_ROOT + '/coupon',
+  init_razorpay: API_ROOT + '/order/razorpay',
+  reset_password: API_ROOT + '/user/reset',
+  forgot: API_ROOT + '/user/forgot',
+  create_lead: API_ROOT + '/lead/create', 
+  upload_resume: API_ROOT + '/user/upload',
+  check_scholarship: API_ROOT + '/scholarship/',
+  fetch_news: WP_ROOT_API + '/wp-json/wp/v2/posts?_embed&per_page=6',
+  WP_ROOT_API
+}
+export default APIUrls;

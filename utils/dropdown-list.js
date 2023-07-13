@@ -1,0 +1,1 @@
+export const categoryList = ["BLOCKCHAIN","CYBER SECURITY","CYBER FORENSICS"]
